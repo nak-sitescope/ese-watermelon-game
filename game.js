@@ -1,6 +1,9 @@
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
+const fruits = [];
+const particles = [];
+
 const GRAVITY = 0.6;
 const FRICTION = 0.99;
 const BOUNCE = 0.7;
@@ -190,9 +193,6 @@ class Fruit {
         }
     }
 }
-
-let fruits = [];
-let particles = [];
 
 function gameLoop() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
