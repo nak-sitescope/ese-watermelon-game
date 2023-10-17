@@ -103,9 +103,9 @@ function getRandomFruitType() {
 class Fruit {
     constructor(type, x, y) {
         this.type = type;
-        this.x = x;
-        this.y = y;
         this.radius = FRUITS[this.type].size;
+        this.x = Math.min(Math.max(x, this.radius), canvas.width - this.radius);
+        this.y = y;
         this.dy = 0;
         this.dx = (x > canvas.width / 2) ? -2 : 2;
         this.framesSinceCreation = 0;
