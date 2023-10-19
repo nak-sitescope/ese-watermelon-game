@@ -118,6 +118,13 @@ class Fruit {
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         ctx.fill();
 
+        ctx.beginPath();
+        ctx.moveTo(this.x, this.y);
+        ctx.lineTo(this.x + this.dx * 5, this.y + this.dy * 5);
+        ctx.strokeStyle = 'red';        
+        ctx.lineWidth = 5;
+        ctx.stroke();
+
         ctx.fillStyle = 'white';
         ctx.font = '14px Arial';
         ctx.textAlign = 'center';
